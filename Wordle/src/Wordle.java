@@ -14,9 +14,6 @@ public class Wordle{
         for(int i = 0; i < 5757; ++i){
             words[i] = scan.next();
         }
-        //for(int i = 0; i < words.length; ++i){
-        //    System.out.println(words[i]);
-        //}
 
         scan.close();
         int random = rand.nextInt(words.length);
@@ -70,7 +67,6 @@ public class Wordle{
             for(int i = 0; i < word.length(); i++){
                 boolean correct = false;
                 newGuess = guess;
-                //System.out.println(newWord + " " + newGuess);
 
 
                 if(guess.charAt(i) == word.charAt(i)){
@@ -84,7 +80,6 @@ public class Wordle{
                             if(guess.charAt(j) == word.charAt(j)){
                                 newWord = newWord.replaceFirst(newWord.substring(j,j+1),"");
                                 newGuess = newGuess.replaceFirst(newGuess.substring(j,j+1),"");
-                                //System.out.println(newWord + " " + newGuess);
                             }
                         }
                     }
@@ -95,7 +90,6 @@ public class Wordle{
                                 System.out.print("C ");
                                 newWord = newWord.replaceFirst(newWord.substring(j,j+1),"");
                                 newGuess = newGuess.replaceFirst(newGuess.substring(i,i+1),"");
-                                //System.out.println(newWord + " " + newGuess);
                                 correct = true;
                             }
                         }
