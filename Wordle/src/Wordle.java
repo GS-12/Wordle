@@ -5,7 +5,6 @@ import java.io.*;
 public class Wordle{
 
     public static void main(String[] args) throws IOException{
-        // Write debugAnswer to get word.
         FileInputStream fileByteStream = new FileInputStream("files/words.txt");
         Scanner scan = new Scanner(fileByteStream);
         Random rand = new Random();
@@ -17,11 +16,9 @@ public class Wordle{
 
         scan.close();
         int random = rand.nextInt(words.length);
-        //System.out.println(random);
         String word = words[random];
         scan.close();
         Scanner scnr = new Scanner(System.in);
-        //System.out.println(word);
         System.out.println("Guess the 5-letter word.");
         System.out.println("You have 6 tries.");
         System.out.println("Y - correct, C - correct but in the wrong place, X - wrong");
